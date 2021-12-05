@@ -1,0 +1,836 @@
+/* ここから下に記載していく */
+/* 『;』忘れて注意 */
+
+/* 文字バゲ防止のコード */
+@charset "utf-8";
+
+html{
+    font-size: 62.5%; /* 16px * 62.5% = 10px、1rem = 10px*/
+    /* ゆっくりスクロールしてくれる　by守屋さん */
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #222222;
+    font-size: 1.6rem;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    background:white;
+}
+
+/* 文章に蛍光をつける */
+p span {
+    position: relative;
+    background: linear-gradient(transparent 40%, yellow 40%);
+}
+
+img{
+    /* 幅が画像データ100%より大きくならない + かつ、100%以下となる */
+    max-width: 100%;
+    /* ブラウザの幅に画像が収まるようになる */
+    height: auto;
+}
+
+.text-center{
+    /* 文章や画像を中央に揃える */
+    text-align: center;
+}
+
+/* ---header
+--- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 2.1rem;
+    gap: 50px;
+}
+
+
+
+
+.hedder_picture {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+.hedder_tex {
+    /* 画像に重ねた文字の場所設定 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+}
+/*  */
+/*  */
+
+
+  
+  
+  
+.a{
+    font-size: 3.6rem;
+    font-weight: bold;
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+    
+}
+
+.b{
+    font-size: 2.4rem;
+    text-align: center;
+
+}
+
+.profile{
+    /* section自体の余白を作成。上下、左右 */
+    padding: 60px 0;
+}
+
+/*---
+ aboouに関してのcss ---*/
+.about{
+    width: 1200px;
+    /* margin auto : 左右の余白を等しくする */
+    margin: auto;
+}
+.profile_title{
+    /* marginは上、左右、下の順に記述 */
+    margin: 0 0 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #ffd61a;
+}
+
+.profile_eyecatch{
+    /* marginは上、左右、下の順に記述 */
+    margin: 0 0 60px;
+    font-size: 1.8rem;
+
+    /* 文字がふわっと出るコードのはじまり https://coco-factory.jp/ugokuweb/css01/*/
+    animation-name: fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    /* ふわっと出るアニメーションがずっと続くコードのはじまり https://coco-factory.jp/ugokuweb/css02/*/
+    animation-iteration-count:infinite;
+    /* ふわっと出るアニメーションがずっと続くコードの終わり */
+    opacity: 0;    
+}
+
+@keyframes fadeInAnime{
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+    /* 文字がふわっと出るコードの終わり */
+
+
+.profile_text1{
+    /* 行間の指定 */
+    line-height: 2;
+    /* 行間揃え。文章のつら合わせ */
+    text-align: justify;
+    /* IE用のjustify */
+    text-align: inter-deograph;
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.profile_text2{
+    /* 行間の指定 */
+    line-height: 2;
+    /* 行間揃え。文章のつら合わせ */
+    text-align: justify;
+    /* IE用のjustify */
+    text-align: inter-deograph;
+    margin: 0 0 0px;
+    text-align: center;
+}
+
+.profile_text3{
+    /* 行間の指定 */
+    line-height: 2;
+    /* 行間揃え。文章のつら合わせ */
+    text-align: justify;
+    /* IE用のjustify */
+    text-align: inter-deograph;
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.profile_text4{
+    /* 行間の指定 */
+    line-height: 2;
+    /* 行間揃え。文章のつら合わせ */
+    text-align: justify;
+    /* IE用のjustify */
+    text-align: inter-deograph;
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+
+
+.profile_text5{
+    /* 行間の指定 */
+    line-height: 2;
+    /* 行間揃え。文章のつら合わせ */
+    text-align: justify;
+    /* IE用のjustify */
+    text-align: inter-deograph;
+    margin: 0 0 0px;
+    text-align: center;
+}
+
+.profile_text6{
+    /* 行間の指定 */
+    line-height: 2;
+    /* 行間揃え。文章のつら合わせ */
+    text-align: justify;
+    /* IE用のjustify */
+    text-align: inter-deograph;
+    margin: 0 0 80px;
+    text-align: center;
+}
+
+
+/*  */
+.about_list{
+    display: flex;
+    /* 主軸（横）に対して中央揃えにしてくれる by新藤さん */
+    justify-content: center;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about_img{
+    /* 画像の幅を25%にして4枚の画像が収まるように配置 by守屋さん */
+    width: 25%;
+}
+
+
+
+/* ---
+ courseに関してのcss*/
+
+   
+  /* 偶数番目に登場する.cardは右から左に要素が配置されるようにする */
+
+.course__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+  
+.course__text {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    color: black;    
+}
+
+
+
+  /* 互い違い */
+.courseBox {
+    /* border: 10px solid red; */
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    background-color: #fafafa;
+}
+.courseBox.hanten {
+    flex-direction: row-reverse;
+}
+  
+.imgBlock {
+    width: 50%;
+}
+  
+.imgBlock img {
+    width: 100%;
+}
+  
+.textBox {
+    width: 50%;
+    padding: 90px 200px 0 50px;
+    box-sizing: border-box;
+}
+.textBox__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+  
+.courseBox.hanten .textBox {
+    padding: 90px 50px 0 200px;
+}
+  
+.textBox__text {
+    font-size: 16px;
+    line-height: 1.5;
+    
+}
+
+
+/*---
+  newsに関してのcss*/
+.wrapper{
+    max-width: 960px;
+    margin: auto;
+}
+
+.news_title{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #ffd61a;
+
+}
+
+.text_news{
+    padding: 0 0 60px 0;
+}
+
+.news_list{
+/* 画像を横並びにする */
+    display: flex;
+/* 画像と画像の間に空白を入れる */
+    gap: 30px;
+}
+
+.news_item{
+/* 画像の幅を設定 */
+    width: 300px;
+}
+
+.news_eyecatch{
+    margin: 0 0px;
+}
+
+.news_contens{
+    padding: 24px 0 60px 0;
+}
+
+.news_date{
+    padding: 30px 0 24px 0;
+}
+
+.news_heading{
+    margin: 0 0px;
+    line-height: 1.5;
+}
+
+/*  */
+
+  /*ホバー有り状態のスタイル＿ここまで*/
+.bnt{
+    display: block;
+    width: 300px;
+    height: 60px;
+    background-color: #ffd61a;
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 60px;
+    text-align: center;
+/* moreの部分が横方向のセンターに移動した */
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.bnt:hover{
+    background: #fff;
+    color: #111!important;
+}
+
+
+
+/* ---accessのcss
+ ---*/
+.access{
+    background: #fafafa;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.access_text1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 30px auto 60px auto;
+}
+
+.access_text2{
+    margin-bottom: 60px;
+}
+
+.map{
+    margin: 60px 0 60px 0;
+    text-align: center;
+}
+
+    
+table{
+    width: 500px;
+    
+}
+  
+.table_access{
+    margin-left:auto;
+    margin-right:auto;
+    padding: 0 0 60px 0;
+}
+
+.imgBox {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+  
+.imgBox img {
+    width: 100%;
+}
+  
+.mapBox {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mapBox iframe {
+    width: 100%;
+}
+  
+.info {
+    width: 1200px;
+    margin: 60px auto 60px auto;
+    /* background: antiquewhite; */
+}
+  
+.infoBox {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 400px;
+    margin: 0 auto;
+    align-items: center;
+}
+.infoBox__title {
+    width: 30%;
+    margin-top: 30px;
+}
+  
+.infoBox__text {
+    width: 70%;
+    line-height: 1.6;
+    margin-top: 30px;
+
+}
+
+
+
+
+
+/* ---問い合わせフォーム
+--- */
+.form_wrapper{
+    width: 800px;
+    margin: auto;
+}
+
+.form_parts{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: solid 1px black;
+    font-size: 1.6rem;
+    
+}
+
+input[type*="radio"]{
+    margin: 0 0 24px 0;
+
+}
+
+.bnt2{
+    display: block;
+    width: 300px;
+    height: 60px;
+    margin: auto;
+    background-color: #ffd61a;
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 60px;    
+    border: none;
+    appearance: none;
+    margin-top: 30px;
+    margin-bottom: 140px;
+
+}
+
+.bnt3{
+/* デフォルトのスタイルを解除する方法 by守屋さん */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    width: 300px;
+    height: 60px;
+    background-color: #ffd61a;
+    font-size: 1.6rem;
+    color: #fafafa;
+}
+
+
+
+.contact_title{
+    margin: 60px 0px 30px 0px;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.contact_text1{
+    margin: 0px 0px 60px 0px;
+    text-align: center;
+}
+
+.contact_text2{
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+    /* 行間の指定 */
+    line-height: 1.2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact_text3{
+    margin: 0px 0px 70px 0px;
+    text-align: center;
+    /* 行間の指定 */
+    line-height: 1.2;
+
+}
+
+.form_inner{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.form_title{
+    width: 260px;
+    padding: 20px 0 0 0;
+}
+
+
+.form_item{
+    width: 400px;
+    padding: 12px 0 0 0;
+
+}
+
+.information_tabel{
+    border: 1px solid black; 
+
+}
+
+
+/*  */
+/* 安達さんに教えてもらったtable */
+.contact__form {
+    background-color:white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+input[type="text"],input[type="email"]{
+    border: solid 1px rgb(8, 8, 8);
+    border-radius:5px;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    width:400px;  
+    height: 30px;
+}
+
+select{
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width:400px;
+    height: 30px;
+}
+
+table{
+    text-align: left;
+    table-layout: auto;
+    width: 800px;
+    margin-bottom: 60px;
+    border-left: none;
+}
+
+table, td ,th{
+    border-right: none;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+
+}
+
+.td1-1{
+    width: 240px;
+    margin-right: 1px black solid;
+    border-right:  1px black solid;;
+    padding-left: 16px;
+}
+
+.td1-2{
+    margin-right: 8px black solid;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    border-right: none;
+    width: 36px;
+}
+
+.td2-1{
+    width: 240px;
+    margin-right: 1px black solid;
+    border-right:  1px black solid;;
+    padding-left: 16px;
+}
+
+.td2-2{
+    margin-right: 8px black solid;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    border-right: none;
+    width: 36px;
+}
+
+.td3-1{
+    width: 240px;
+    margin-right: 1px black solid;
+    border-right:  1px black solid;
+    padding-left: 16px;
+
+}
+
+.td3-2{
+    margin-right: 8px black solid;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    border-right: none;
+    width: 36px;
+}
+
+.td4-1{
+    width: 240px;
+    margin-right: 1px black solid;
+    border-right:  1px black solid;
+    padding-left: 16px;
+    padding-right: 64px;
+    line-height: 1.5;
+    vertical-align:top;
+    padding-top: 5px;
+
+}
+
+.td4-2{
+    margin-right: 8px black solid;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    border-right: none;
+    width: 36px;
+}
+
+.td5-1{
+    width: 240px;
+    margin-right: 1px black solid;
+    border-right:  1px black solid;
+    padding-left: 16px;
+}
+
+.td5-2{
+    margin-right: 8px black solid;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    border-right: none;
+    width: 36px;
+}
+
+.td6-1{
+    width: 240px;
+    margin-right: 1px black solid;
+    border-right:  1px black solid;
+    padding-left: 16px;
+    vertical-align:top;
+    padding-top: 15px;
+}
+
+.td6-2{
+    margin-right: 8px black solid;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    border-right: none;
+    width: 36px;
+}
+
+.reason1{
+    display: block;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 24px;
+    margin-left: 20px;
+}
+
+.reason2{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 24px;
+    margin-left: 20px;
+}
+
+.reason3{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 24px;
+    margin-left: 20px;    
+}
+.reason4{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 24px;
+    margin-left: 20px;
+}
+
+.contet-label2{
+    text-align: top;
+}
+
+textarea {
+    border: solid 1px rgb(8, 8, 8);
+    border-radius:5px;
+    width: 400px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+
+.bnt2{
+    display: block;
+    width: 300px;
+    height: 60px;
+    margin: auto;
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 60px;    
+    border: none;
+    appearance: none;
+    margin-top: 30px;
+    margin-bottom: 140px;
+
+}
+
+.bnt3{
+/* デフォルトのスタイルを解除する方法 by守屋さん */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    width: 300px;
+    height: 60px;
+    background-color: #ffd61a;
+    font-size: 1.6rem;
+    color: #fafafa;
+}
+
+.bnt3:hover{
+    background: #ffd61a;
+    color: #111!important;
+}
+
+/*  */
+
+
+/*  */
+
+/* footerに関してのcss */
+footer{
+    color: white;
+    font-size: 1.6rem;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    background: #707070;
+    margin: 140px auto 0px auto;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    width: 1200px;
+}
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
